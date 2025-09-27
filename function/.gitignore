@@ -49,3 +49,9 @@ testing/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+
+
+# a one-line command to remove your large .exe file from Git history so you can finally push without errors
+
+# git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ec2/terraform-provider-aws_v5.98.0_x5.exe" --prune-empty --tag-name-filter cat -- --all && rm -rf .git/refs/original/ && git reflog expire --expire=now --all && git gc --prune=now --aggressive && git push origin main --force
